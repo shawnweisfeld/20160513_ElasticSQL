@@ -99,7 +99,7 @@ namespace ElasticCaptainSmackDown.Util
                     if (!DatabaseExists(server, db))
                     {
                         // Begin creation (which is async for Standard/Premium editions)
-                        cmd.CommandText = $"CREATE DATABASE {db} (EDITION = '{engineEdition}')";
+                        cmd.CommandText = $"CREATE DATABASE {db} (EDITION = 'basic')";
                         cmd.CommandTimeout = 60;
                         cmd.ExecuteNonQuery();
                     }
